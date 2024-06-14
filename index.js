@@ -8,9 +8,15 @@ for(let i = 1; i < gridSize * gridSize; i++){
     gridContainer.appendChild(cell);
 }
 
+let gridCell = document.querySelectorAll('.cell');
+gridCell.forEach((cell) => {
+    cell.addEventListener('mouseover', (item) => {
+        item.style.backgroundColor = 'yellow';
+    })
+})
 
-// the grid has to have an event listener
+// the grid cell has to have an event listener
 // using forEach, the item(placeholder) will have an add Event listener
-// and the action will be a mouseover or a left click
-// then the that item will draw? (produce a color) or change the color of 
-// that grid item
+// and the action will be a mouseover 
+// then the that item will change the color of 
+// that grid item. (The background)
