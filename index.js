@@ -11,13 +11,8 @@ for(let i = 1; i < gridSize * gridSize; i++){
 let gridCell = document.querySelectorAll('.cell');
 
 gridCell.forEach((cell) => {
-    cell.addEventListener('mouseover', (event) => {
+    cell.addEventListener('mouseover', () => {
         cell.style.backgroundColor = 'yellow';
     })
 })
 
-// the grid cell has to have an event listener
-// using forEach, the item(placeholder) will have an add Event listener
-// and the action will be a mouseover 
-// then the that item will change the color of 
-// that grid item. (The background)
