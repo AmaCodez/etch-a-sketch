@@ -1,14 +1,13 @@
 #grid-container{
     display: flex;
-    /* border: 1px solid black;
-    height: 500px;
-    width: 500px; */
+    flex-wrap: wrap;
+    border: 1px solid black;
 }
 
 .cell {
-    flex: 1;
-    /* border: 1px solid pink; */
-}
+    flex: 1 0 10%; /* Flex grow, flex shrink, flex basis  */
+    border: 1px solid gray;
+    box-sizing: border-box;
+    height: 50px;
+} 
 
-/* grid-container needs a display of grid
-and the child needs it's style
