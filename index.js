@@ -9,9 +9,10 @@ for(let i = 1; i < gridSize * gridSize; i++){
 }
 
 let gridCell = document.querySelectorAll('.cell');
+
 gridCell.forEach((cell) => {
-    cell.addEventListener('mouseover', (item) => {
-        item.style.backgroundColor = 'yellow';
+    cell.addEventListener('mouseover', (event) => {
+        cell.style.backgroundColor = 'yellow';
     })
 })
 
