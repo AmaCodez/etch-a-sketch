@@ -6,15 +6,6 @@ let btn = document.querySelector('.btn');
 
 document.addEventListener('DOMContentLoaded', () => generateGrid(16));
 
-// function createInitialGrid (size){
-//     size = 16;
-// for(let i = 0; i < size * size; i++){
-//     const cell = document.createElement('div');
-//     cell.classList.add('cell');
-//     gridContainer.appendChild(cell);
-// }
-// addHoverEffect();
-// }
 
 function addHoverEffect(){
     let gridCell = document.querySelectorAll('.cell');
