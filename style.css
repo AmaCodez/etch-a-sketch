@@ -2,17 +2,15 @@
     display: flex;
     flex-wrap: wrap;
     border: 1px solid black;
-    width: 500px;
-    height: 500px;
+    flex-grow: 1;
+    width: 600px;
   
 }
 
 .cell {
-    flex: 1 0 10%; /* Flex grow, flex shrink, flex basis  */
     border: 1px solid gray;
     box-sizing: border-box;
-    height: 50px;
-} 
+}
 
 .btn{
     margin-bottom: 10px;
