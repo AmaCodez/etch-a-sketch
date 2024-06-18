@@ -4,8 +4,21 @@ let pixelLength = 600;
 const gridContainer = document.querySelector('#grid-container');
 let btn = document.querySelector('.btn');
 
-document.addEventListener('DOMContentLoaded', () => generateGrid(16));
 
+createGrid(16);
+
+function createGrid(size) {
+   
+    gridContainer.innerHTML = ''; // Deletes previous grid
+    for (let i = 0; i < size * size; i++) {
+      const cell = document.createElement('div');
+      cell.classList.add('cell');
+      gridContainer.appendChild(cell);
+      cell.style.width = `${pixelLength / size}px`;
+      cell.style.height = `${pixelLength / size}px`;
+    }
+    addHoverEffect();
+  }
 
 function addHoverEffect(){
     let gridCell = document.querySelectorAll('.cell');
@@ -17,22 +30,12 @@ function addHoverEffect(){
 }
 
 function generateGrid (){
-    let userResponse = parseInt(prompt('Enter a number of squares per side', '16'));
+    let userResponse = parseInt(prompt('Enter a number of squares per side', '0'));
     if (userResponse < 1 || userResponse > 100 || isNaN(userResponse)) {
         alert('Number must be 1 or lesser than 100');
-        return;
+        userResponse = 16;
     }
-        gridContainer.innerHTML = ''; // Deletes previous grid
-        
-        for(let i = 0; i < userResponse * userResponse; i++){
-            const cell = document.createElement('div');
-            cell.classList.add('cell');
-            gridContainer.appendChild(cell);
-            cell.style.width = `${pixelLength / userResponse}px`;
-            cell.style.height = `${pixelLength / userResponse}px`;
-        }
-
-        addHoverEffect();
+        createGrid(userResponse);
 }
 
 
